@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+  <div style="text-align: center; margin-top: 10px;">
+    <img src="{% static '/admin/img/closet.png' %}" alt="" width="90%" height="auto" class="d-inline-block align-text-top">
+  </div>
+  <h3 id="mycloset" style="margin-top: 40px; margin-left: 70px">나의 옷 리스트</h3>
+  <div id="closet" style="text-align: center; margin-left: 70px;">
+    
+    <img src="{% static '/admin/img/outer.png' %}" class="img-thumbnail" alt="first" height="100px">
+    <img src="{% static '/admin/img/pants.png' %}" class="img-thumbnail" alt="middle" height="100px">
+    <img src="{% static '/admin/img/shoes.png' %}" class="img-thumbnail" alt="middle2" height="100px">
+    <img src="{% static '/admin/img/shirt.png' %}" class="img-thumbnail" alt="last" height="100px"> 
+    <img src="{% static '/admin/img/outer.png' %}" class="img-thumbnail" alt="middle2" height="100px">
+    <img src="{% static '/admin/img/shoes.png' %}" class="img-thumbnail" alt="last" height="100px"> 
+
+  </div>
+  <div class="d-grid col-20" id="guide" style="margin: 40px; text-align: center;">
+    <button type="button" class="btn btn-secondary btn-lg">스타일 가이드라인 보러가기</button>
+  </div>
+{% endblock %}

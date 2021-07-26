@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+  <section class="item_list">
+    <h1>내 옷장</h1>
+    {% for i in items %}
+    <img src="{{i.image.url}}">
+    <a href="{% url 'item_detail' index=i.id %}">{{ i.name }}</a>
+    <br>
+    {% endfor %}
+
+    <a href="{% url 'create' %}">새 옷 추가하기</a>
+  </section>
+  <section class="combi_list">
+    <h1>내 코디</h1>
+    {% for c in combis %}
+    <a href="{% url 'combination_detail' index=c.id %}">{{ c.name }}</a>
+    <br>
+    {% endfor %}
+  </section>
+
+{% endblock %}
